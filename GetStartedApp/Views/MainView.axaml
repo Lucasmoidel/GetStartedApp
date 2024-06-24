@@ -1,0 +1,22 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:GetStartedApp.ViewModels"
+             d:DesignWidth="200" 
+			 d:DesignHeight="100"
+             x:Class="GetStartedApp.Views.MainView"
+             x:DataType="vm:MainViewModel">
+	    
+    <Design.DataContext>
+    <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+    <vm:MainViewModel />
+    </Design.DataContext>
+
+	<Grid>
+        <TextBlock HorizontalAlignment="Center" Text="{Binding HelloText}"></TextBlock>
+        <Button  Click="YesButtonClicked" Width="50"  Margin="15" HorizontalAlignment="Left">yes</Button>
+		<Button Click="NoButtonClicked" Width="50"  Margin="15" HorizontalAlignment="Right">no</Button>
+    </Grid>
+</UserControl>
